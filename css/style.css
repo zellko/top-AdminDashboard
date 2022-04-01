@@ -3,12 +3,60 @@
     padding: 0;
 }
 
+:root.dark {
+    /*--color-base-bg: #0F172A;*/
+    --color-base-bg: linear-gradient(30deg, #1E293B 0%, #475569 90%, #0EA5E9 100%);
+    --color-sidebar-bg: #0284C7;
+    --color-base-text: #E2E8F0;
+    --color-hl-text: #0EA5E9;
+    --color-card-bg: #7DD3FC;
+}
+
+ :root.light {
+    --color-base-bg: linear-gradient(30deg, #F1F5F9 0%, #CBD5E1 90%, #0EA5E9 100%);
+    --color-sidebar-bg: #7DD3FC;
+    --color-base-text: #1E293B;
+    --color-hl-text: #0EA5E9;
+    --color-card-bg: #0284C7;
+}
+
 @font-face {
     font-family: Open-Sans;
     src: url(../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
 }
 
 body {
-    background-color: aqua;
+    background: var(--color-base-bg);
+    color: var(--color-base-text);
+    height: 100vh;
+    color: var(--color-base-text);
     font-family: Open-Sans, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 48px 72px calc(100vh - 120px);
+    grid-template-areas: "sidebar header header" "sidebar menu menu" "sidebar project highlight";
+}
+
+.header {
+    grid-area: header;
+}
+
+.menu {
+    grid-area: menu;
+}
+
+.project {
+    grid-area: project;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: var(--color-sidebar-bg);
+}
+
+.highlight {
+    grid-area: highlight;
 }

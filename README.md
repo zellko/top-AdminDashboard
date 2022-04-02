@@ -10,21 +10,20 @@ ToDo:
      - [ ] Project
      - [ ] Highlight (Announcements / Trending)
      - [ ] Sidebar
-     - [ ] 
 - [ ] Font sizes / margin / padding / ... (finalization)  
 - [ ] Add images / icons
 - [ ] (Light / Dark theme)
 - [ ] (Try to make it as responsive as possible)
 
 ___
-Image:
-- x
+Images:
+- https://jdenticon.com/get-started/vanilla-js.html
 
 Color Palette:
-- x
+- https://tailwindcss.com/docs/customizing-colors
 
 Icons:
-- x
+- https://fontawesome.com/
 
 Font:
 - https://fonts.google.com/specimen/Open+Sans?sort=popularity

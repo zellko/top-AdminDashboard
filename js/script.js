@@ -7,7 +7,7 @@ function setTheme() {
     const newTheme = root.className === "dark" ? "light" : "dark";
     root.className = newTheme;
     // Change icon 
-    const newThemeIcone = (themeIcon.className.includes("fa-sun")) ? "fa-solid fa-moon fa-2x" : "fa-solid fa-sun fa-2x";
+    const newThemeIcone = (themeIcon.className.includes("fa-sun")) ? "fa-solid fa-moon fa-xl" : "fa-solid fa-sun fa-xl";
     themeIcon.className = newThemeIcone;
 }
 

@@ -40,10 +40,10 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 4fr 2fr;
     /* grid-template-rows: 64px 98px calc(100vh - 64px - 98px); */
-    grid-template-rows: min-content min-content 1fr;
-    grid-template-areas: "sidebar header header" "sidebar menu menu" "sidebar project highlight";
+    grid-template-rows: min-content min-content min-content min-content;
+    grid-template-areas: "sidebar header header" "sidebar menu menu" "sidebar project announcement" "sidebar project trending";
 }
 
 h1 {}
@@ -60,6 +60,11 @@ p {}
 .menu,
 .project {
     padding: 0.8vw 2vw;
+}
+
+.announcement,
+.trending {
+    padding: 0.8vw 2vw 0.8vw 0;
 }
 
 
@@ -231,11 +236,40 @@ SIDEBAR
 
 
 /****************************
-HIGHLIGHT
+Announcement
 ****************************/
 
-.highlight {
-    grid-area: highlight;
+.announcement {
+    grid-area: announcement;
+    background-color: var(--color-base-bg);
+}
+
+.announcement-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content min-content;
+    background-color: var(--color-card-bg);
+    border-radius: 4px;
+    padding: 16px;
+}
+
+.announcement-container div:nth-child(2) {
+    padding: 8px 0;
+    border-top: solid 2px var(--color-base-text);
+    border-bottom: solid 2px var(--color-base-text);
+}
+
+.announcement-container div {
+    padding: 8px 0;
+}
+
+
+/****************************
+Trending
+****************************/
+
+.trending {
+    grid-area: trending;
     background-color: var(--color-base-bg);
 }
 

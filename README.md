@@ -8,7 +8,8 @@ ToDo:
      - [x] Header
      - [x] Menu
      - [x] Project
-     - [ ] Highlight (Announcements / Trending)
+     - [x] Announcements
+     - [ ] Trending
      - [ ] Sidebar
      - [ ] Cards
 - [ ] Font sizes / margin / padding / ... (finalization)

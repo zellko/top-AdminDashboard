@@ -4,12 +4,12 @@ ___
 ToDo:
 - [x] Overall layout (grid)
 - [x] Create CSS variables:
-- Layout of each sections:
+- [ ]Layout of each sections:
      - [x] Header
      - [x] Menu
      - [x] Project
      - [x] Announcements
-     - [ ] Trending
+     - [x] Trending
      - [ ] Sidebar
      - [ ] Cards
 - [ ] Font sizes / margin / padding / ... (finalization)
@@ -26,9 +26,10 @@ Color Palette:
 
 Icons:
 - https://fontawesome.com/
+- https://materialdesignicons.com/
 
 Font:
 - https://fonts.google.com/specimen/Open+Sans?sort=popularity
 
 Code:
-- x
+- Theme color switch: https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-custom-properties

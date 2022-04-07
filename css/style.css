@@ -9,18 +9,18 @@
     --color-base-bg: linear-gradient(45deg, #171745 0%, #216b92 100%);
     --color-sidebar-bg: #171745;
     --color-base-text: #E2E8F0;
-    --color-hl-text: #0EA5E9;
+    --color-hl-text: #216b92;
     --color-card-bg: rgba(23, 23, 69, 0.6);
     --color-search-bar: rgba(33, 107, 146, 0.6);
 }
 
  :root.light {
-    --color-base-bg: linear-gradient(45deg, #F1F5F9 0%, #506d9c 90%);
-    --color-sidebar-bg: #7DD3FC;
-    --color-base-text: #1E293B;
+    --color-base-bg: linear-gradient(45deg, #ffffff 0%, #ffffff 80%, #92c8e6 100%);
+    --color-sidebar-bg: #f6f4f4;
+    --color-base-text: #060607;
     --color-hl-text: #0EA5E9;
-    --color-card-bg: #7dd3fc36;
-    --color-search-bar: rgb(125, 211, 252, 0.5);
+    --color-card-bg: hsla(201, 63%, 35%, 0.219);
+    --color-search-bar: rgba(33, 107, 146, 0.281);
 }
 
 @font-face {
@@ -31,7 +31,6 @@
 body {
     background: var(--color-base-bg);
     color: var(--color-base-text);
-    color: var(--color-base-text);
     font-family: Open-Sans, Verdana, Geneva, Tahoma, sans-serif;
     /* display: grid; */
     min-height: 100vh;
@@ -39,11 +38,16 @@ body {
 }
 
 .container {
+    background-image: url("../img/grain\ pattern_200px.png");
     display: grid;
     grid-template-columns: 1fr 3fr 1.3fr;
     /* grid-template-rows: 64px 98px calc(100vh - 64px - 98px); */
     grid-template-rows: min-content min-content min-content min-content;
     grid-template-areas: "sidebar header header" "sidebar menu menu" "sidebar project announcement" "sidebar project trending";
+}
+
+.container>div>h3:nth-child(1) {
+    margin: 24px 0 12px 0;
 }
 
 h1 {}
@@ -54,17 +58,21 @@ h3 {}
 
 h4 {}
 
+h5 {}
+
+h6 {}
+
 p {}
 
 .header,
 .menu,
 .project {
-    padding: 0.8vw 2vw;
+    padding: 0 2vw;
 }
 
 .announcement,
 .trending {
-    padding: 0.8vw 2vw 0.8vw 0;
+    margin: 0 2vw 0 0;
 }
 
 
@@ -219,10 +227,37 @@ PROJECT
 
 .project-card {
     background-color: var(--color-card-bg);
-    height: 200px;
+    height: auto;
     border-radius: 4px;
     border-left: 8px solid var(--color-sidebar-bg);
     box-shadow: 3px 3px 5px var(--color-sidebar-bg);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 2vw 1vw 0 2vw;
+}
+
+.project-card-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 24px;
+    margin: 1vw 2vw 2vw 0;
+}
+
+.project-card-icons>button {
+    background: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+.project-card-icons>button:hover {
+    color: var(--color-hl-text);
 }
 
 
@@ -233,6 +268,41 @@ SIDEBAR
 .sidebar {
     grid-area: sidebar;
     background-color: var(--color-sidebar-bg);
+}
+
+.sidebar-container {
+    display: grid;
+    grid-template-columns: min-content;
+    grid-template-rows: repeat(9, min-content);
+    margin: 0 0 0 24px;
+    gap: 24px;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    margin: 16px 0 48px 16px;
+}
+
+.sidebar button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    border: 0;
+    background: 0;
+    color: var(--color-base-text);
+    cursor: pointer;
+}
+
+.sidebar-container button:nth-child(7) {
+    margin-top: 64px;
+}
+
+.sidebar button:hover {
+    color: var(--color-hl-text);
 }
 
 

@@ -11,10 +11,10 @@ ToDo:
      - [x] Announcements
      - [x] Trending
      - [x] Sidebar
-     - [ ] Cards  (Need to change PNG to SVG to allow button:hover color swap)
+     - [x] Cards  (Need to change PNG to SVG to allow button:hover color swap)
 - [ ] Font sizes / margin / padding / ... (finalization)
 - [x] Add images / icons
-- [ ] (Light / Dark theme)
+- [x] (Light / Dark theme)
 - [ ] (Try to make it as responsive as possible)
 
 ___

@@ -5,7 +5,7 @@
 }
 
  :root.dark {
-    /*--color-base-bg: #0F172A;*/
+    --bg-image: url("../img/grain\ pattern_200px.png");
     --color-base-bg: linear-gradient(45deg, #171745 0%, #216b92 100%);
     --color-sidebar-bg: #171745;
     --color-base-text: #E2E8F0;
@@ -16,7 +16,7 @@
 
  :root.light {
     --color-base-bg: linear-gradient(45deg, #ffffff 0%, #ffffff 80%, #92c8e6 100%);
-    --color-sidebar-bg: #f6f4f4;
+    --color-sidebar-bg: #92c8e6;
     --color-base-text: #060607;
     --color-hl-text: #0EA5E9;
     --color-card-bg: hsla(201, 63%, 35%, 0.219);
@@ -32,56 +32,63 @@ body {
     background: var(--color-base-bg);
     color: var(--color-base-text);
     font-family: Open-Sans, Verdana, Geneva, Tahoma, sans-serif;
-    /* display: grid; */
-    min-height: 100vh;
-    height: 100%;
 }
 
 .container {
-    background-image: url("../img/grain\ pattern_200px.png");
+    background-image: var(--bg-image);
     display: grid;
     grid-template-columns: 1fr 3fr 1.3fr;
-    /* grid-template-rows: 64px 98px calc(100vh - 64px - 98px); */
-    grid-template-rows: min-content min-content min-content min-content;
+    grid-template-rows: min-content min-content min-content 1fr;
     grid-template-areas: "sidebar header header" "sidebar menu menu" "sidebar project announcement" "sidebar project trending";
+    min-height: 100vh;
+    height: 100%;
 }
 
 .container>div>h3:nth-child(1) {
     margin: 24px 0 12px 0;
 }
 
-h1 {}
+h1 {
+    font-size: 1.7rem;
+}
 
-h2 {}
+h2 {
+    font-size: 1.5rem;
+}
 
-h3 {}
+h3 {
+    font-size: 1.3rem;
+}
 
-h4 {}
+h4 {
+    font-size: 1.1rem;
+}
 
-h5 {}
+h5 {
+    font-size: 0.9rem;
+}
 
-h6 {}
+button {
+    color: var(--color-base-text);
+    border: 0;
+    background: 0;
+    cursor: pointer;
+}
 
-p {}
+button:hover {
+    color: var(--color-hl-text);
+}
 
 .header,
 .menu,
 .project {
-    padding: 0 2vw;
+    padding: 1vw 2vw;
 }
 
 .announcement,
 .trending {
-    margin: 0 2vw 0 0;
+    margin: 1vw 2vw 0 0;
 }
-
-
-/*to be removed*/
-
-
-/* div {
-    border: 1px solid black;
-} */
 
 
 /****************************
@@ -93,21 +100,8 @@ HEADER
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    padding: .5vw 2vw;
     gap: 2vw;
-}
-
-.header i {
-    color: var(--color-base-text);
-}
-
-.header button {
-    border: 0;
-    background: 0;
-    cursor: pointer;
-}
-
-.header i:hover {
-    color: var(--color-hl-text);
 }
 
 
@@ -161,7 +155,7 @@ MENU
     grid-area: menu;
     display: grid;
     grid-template-columns: min-content 3fr 2fr;
-    grid-template-rows: 48px 48px;
+    grid-template-rows: 1fr 1fr;
     box-shadow: 0px 5px 5px var(--color-sidebar-bg);
     gap: 0 1vw;
 }
@@ -197,15 +191,12 @@ MENU
 .menu-buttons button {
     width: 108px;
     height: 42px;
-    border: 0;
     border-radius: 21px;
-    color: var(--color-base-text);
     background-color: var(--color-sidebar-bg);
     font-size: 1rem;
-    cursor: pointer;
 }
 
-.menu-buttons button:hover {
+.menu-buttons>button:hover {
     color: var(--color-base-text);
     background-color: var(--color-search-bar);
 }
@@ -250,16 +241,6 @@ PROJECT
     margin: 1vw 2vw 2vw 0;
 }
 
-.project-card-icons>button {
-    background: 0;
-    border: 0;
-    cursor: pointer;
-}
-
-.project-card-icons>button:hover {
-    color: var(--color-hl-text);
-}
-
 
 /****************************
 SIDEBAR
@@ -278,31 +259,24 @@ SIDEBAR
     gap: 24px;
 }
 
-.sidebar-header {
+.sidebar-header,
+.sidebar button {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+}
+
+.sidebar-header {
     gap: 8px;
     margin: 16px 0 48px 16px;
 }
 
 .sidebar button {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
     gap: 16px;
-    border: 0;
-    background: 0;
-    color: var(--color-base-text);
-    cursor: pointer;
 }
 
 .sidebar-container button:nth-child(7) {
     margin-top: 64px;
-}
-
-.sidebar button:hover {
-    color: var(--color-hl-text);
 }
 
 
@@ -321,7 +295,7 @@ Announcement
     grid-template-rows: min-content min-content min-content;
     background-color: var(--color-card-bg);
     border-radius: 4px;
-    padding: 8px;
+    padding: 1vw 1vw;
     box-shadow: 3px 3px 5px var(--color-sidebar-bg);
 }
 
@@ -333,6 +307,10 @@ Announcement
 
 .announcement-container div {
     padding: 8px 0;
+}
+
+.announcement-container p {
+    font-size: 0.8rem;
 }
 
 
@@ -351,7 +329,7 @@ Trending
     grid-template-rows: repeat(4, min-content);
     background-color: var(--color-card-bg);
     border-radius: 4px;
-    padding: 16px;
+    padding: 1vw 1vw;
     gap: 16px;
     box-shadow: 3px 3px 5px var(--color-sidebar-bg);
 }
@@ -377,6 +355,7 @@ Trending
     grid-column: 2;
     grid-row: 2;
     align-self: flex-start;
+    font-size: 0.8rem;
 }
 
 

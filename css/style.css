@@ -42,6 +42,7 @@ body {
     grid-template-areas: "sidebar header header" "sidebar menu menu" "sidebar project announcement" "sidebar project trending";
     min-height: 100vh;
     height: 100%;
+    width: 100%;
 }
 
 .container>div>h3:nth-child(1) {
@@ -357,21 +358,3 @@ Trending
     align-self: flex-start;
     font-size: 0.8rem;
 }
-
-
-/****************************
-MEDIA QUERIES
-****************************/
-
-
-/* @media only screen and (max-width: 500px) {
-    .container {
-        display: grid;
-        grid-template-columns: 48px 3fr;
-        grid-template-rows: 72px 128px calc(100vh - 200px);
-        grid-template-areas: "sidebar header " "sidebar menu " "sidebar project";
-    }
-    .highlight {
-        visibility: hidden;
-    }
-} */

@@ -4,7 +4,7 @@ ___
 ToDo:
 - [x] Overall layout (grid)
 - [x] Create CSS variables:
-- [ ]Layout of each sections:
+- [x]Layout of each sections:
      - [x] Header
      - [x] Menu
      - [x] Project
@@ -12,17 +12,17 @@ ToDo:
      - [x] Trending
      - [x] Sidebar
      - [x] Cards  (Need to change PNG to SVG to allow button:hover color swap)
-- [ ] Font sizes / margin / padding / ... (finalization)
+- [x] Font sizes / margin / padding / ... (finalization)
 - [x] Add images / icons
 - [x] (Light / Dark theme)
-- [ ] (Try to make it as responsive as possible)
+- [ ] ~~(Try to make it as responsive as possible)~~
 
 ___
 Images:
 - https://jdenticon.com/get-started/vanilla-js.html
 
 Color Palette:
-- https://tailwindcss.com/docs/customizing-colors
+- x
 
 Icons:
 - https://fontawesome.com/
